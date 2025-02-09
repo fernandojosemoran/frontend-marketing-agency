@@ -5,8 +5,10 @@ export const env = createEnv({
   server: {},
   client: {
     NEXT_PUBLIC_CLIENT_BACKEND_API_URL: z.string().url(),
+    NEXT_PUBLIC_CLIENT_BACKEND_URL: z.string().url(),
   },
   runtimeEnv: {
     NEXT_PUBLIC_CLIENT_BACKEND_API_URL: process.env.NEXT_PUBLIC_CLIENT_BACKEND_API_URL,
+    NEXT_PUBLIC_CLIENT_BACKEND_URL: process.env.NEXT_PUBLIC_CLIENT_BACKEND_URL
   },
 });

@@ -3,6 +3,7 @@
 import { IPostApi } from "@/domain/interfaces/blog.api.interface";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation"; 
+import { env } from "@/infrastructure/constants";
 
 import moment from "moment";
 import Image from "next/image";
@@ -12,6 +13,8 @@ interface IBlogCardHorizontalProps {
   post: IPostApi;
   index: number;
 }
+
+const NEXT_PUBLIC_CLIENT_BACKEND_URL: string = env.NEXT_PUBLIC_CLIENT_BACKEND_URL;
 
 function BlogCardHorizontal({ post, index }: IBlogCardHorizontalProps) {
 
@@ -31,6 +34,8 @@ function BlogCardHorizontal({ post, index }: IBlogCardHorizontalProps) {
     paragraphRef?.current?.classList.add("text-indigo-400");
   };
 
+  console.log({thumbnail: post.thumbnail });
+
   return (
     <div
       onMouseEnter={handlerMouseEnter}
@@ -48,7 +53,7 @@ function BlogCardHorizontal({ post, index }: IBlogCardHorizontalProps) {
                 height={288}
                 priority
                 className="max-h-72 lg:w-96 rounded"
-                src={post.thumbnail}
+                src={`${NEXT_PUBLIC_CLIENT_BACKEND_URL}/${post.thumbnail}`}
                 alt={post.title}
                 style={{
                   objectFit: isHover ? "cover" : "fill"
