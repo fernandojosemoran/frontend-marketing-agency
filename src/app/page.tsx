@@ -27,7 +27,7 @@ export default function Home() {
   });
 
   return (
-    <div className="pt-28">
+    <div className="pt-28 overflow-x-hidden">
       <Header />
       <Incentives />
       <Cases />

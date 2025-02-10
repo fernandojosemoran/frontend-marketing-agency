@@ -8,6 +8,9 @@ import Link from "next/link";
 import useModal from "@/app/shared/hooks/useModal";
 import CloseIcon from "../../icons/Close";
 
+import logo from "@/assets/mark.svg";
+import Image from "next/image";
+
 interface INavbarRoots {
   id: number;
   url: string;
@@ -79,7 +82,7 @@ const Navbar = () => {
         <div className="-ml-4 -mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap md:px-4 px-2 ">
           <li className="ml-4 mt-2">
             <Link href="/" className="text-lg font-medium leading-6">
-              Epic Strategy
+                <Image src={logo} alt="logo"/>
             </Link>
           </li>
 

@@ -14,7 +14,7 @@ export const Angular = ({
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <defs></defs>
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g>
           <g transform="translate(150.000000, 31.000000)" fill="#B52E31">
             <path d="M0.6,71.8 L0.6,8.8 L8.7,8.8 L47.2,59.5 L47.2,8.8 L54.9,8.8 L54.9,71.8 L46.8,71.8 L8.3,20.6 L8.3,71.8 L0.6,71.8 L0.6,71.8 Z"></path>

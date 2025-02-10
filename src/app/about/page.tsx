@@ -3,16 +3,12 @@
 import {
   AboutFeatures,
   AboutHeader,
-  AboutImages,
   AboutTeam,
   Clients,
 } from "./components";
 
-import Image from "next/image";
 import TestStats from "./components/test-stats/TestStats";
-import gitlab from "@/assets/logos/gitlab.svg";
-import nextjs from "@/assets/logos/nextjs.svg";
-import typescript from "@/assets/logos/typescript.svg";
+
 import Link from "next/link";
 import { useEffect } from "react";
 import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
@@ -24,29 +20,7 @@ export default function AboutPage() {
     <div className="pt-28">
       <AboutHeader />
       <TestStats />
-      <AboutImages />
       <Clients />
-      <div className="bg-lm-primary dark:bg-dm-primary">
-        <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5 px-20">
-            <div className="relative h-12 w-12 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <Image width={48} height={48} src={gitlab} alt="gitlab" />
-            </div>
-            <div className="relative h-12 w-12 col-span-1 bg-lm-third rounded-[400px] flex justify-center md:col-span-2 lg:col-span-1">
-              <Image width={48} height={48} src={nextjs} alt="nextjs" />
-            </div>
-            <div className="relative h-12 w-12 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <Image width={48} height={48} src={typescript} alt="typescript" />
-            </div>
-            <div className="relative h-12 w-12 col-span-1 bg-lm-third rounded-[400px] flex justify-center md:col-span-3 lg:col-span-1">
-              <Image width={48} height={48} src={nextjs} alt="next js" />
-            </div>
-            <div className="relative h-12 w-12 col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-              <Image width={48} height={48} src={gitlab} alt="gitlab" />
-            </div>
-          </div>
-        </div>
-      </div>
       <AboutFeatures />
       <AboutTeam />
       <div className="bg-lm-primary dark:bg-dm-third">

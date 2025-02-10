@@ -25,3 +25,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.hidden-x-scroll {
+  scrollbar-width: none;
+}

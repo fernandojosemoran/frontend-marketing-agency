@@ -85,7 +85,7 @@ function SmallSetPaginationSearch({
   };
 
   return (
-    <nav className="border-t border-gray-200 px-4 flex items-center justify-between sm:px-0">
+    <div className="border-t border-gray-200 px-4 flex items-center justify-between sm:px-0">
       {currentPage !== 1 ? (
         <div className="-mt-px w-0 flex-1 flex">
           <div
@@ -125,7 +125,7 @@ function SmallSetPaginationSearch({
           </button>
         </div>
       )}
-    </nav>
+    </div>
   );
 }
 

@@ -1,16 +1,20 @@
-import Link from 'next/link';
 import { navigation } from './navigation';
+
+import Link from 'next/link';
+import logo from "@/assets/mark.svg";
+import Image from 'next/image';
 
 const Footer = () => {
   return (
     <footer className="bg-lm-primary dark:bg-dm-primary" aria-labelledby="footer-heading">
       <h2 className="sr-only text-5xl text-lm-primary">
-        Epic Strategy
+        <Image src={logo} alt='logo'/>
       </h2>
       <div className="mx-auto max-w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <div className='flex items-center gap-2'>
+              <Image src={logo} alt='logo'/>
               <h3 className='text-base font-medium text-lm-third-text dark:text-dm-secondary-text'>Epic Strategy</h3>
             </div>
             <p className="text-base text-lm-primary-text dark:text-dm-third-text">

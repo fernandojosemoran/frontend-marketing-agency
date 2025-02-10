@@ -11,14 +11,14 @@ const Header = () => {
         <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-36 sm:pb-40">
           <div>
             <div>
-              <h1 className="text-4xl font-bold max-h-80 tracking-tight sm:text-center sm:text-6xl">
+              <h1 className="text-4xl h-28 font-bold max-h-80 tracking-tight sm:text-center sm:text-6xl">
                 Unlock your
-                <span className="text-indigo-600 mx-2">
+                <span className="text-indigo-600 mx-2 text-ellipsis">
                   <TypeWriter />
                 </span>
               </h1>
-              <ul className="text-gray-700 dark:text-dm-secondary-text flex gap-8 items-center justify-center my-10">
-                <li className="inline-flex border-b-2 border-transparent hover:border-orange-500 transition duration-300 ease-in-out">
+              <ul className="text-gray-700 dark:text-dm-secondary-text flex gap-4 overflow-x-scroll overflow-y-hidden sm:gap-8 items-center justify-center my-10 hidden-x-scroll">
+                <li className="text-nowrap inline-flex border-b-2 border-transparent hover:border-indigo-400 transition duration-300 ease-in-out">
                   <Link
                     href="/services/item1"
                     className="mt-6 text-lg font-medium leading-8 sm:text-center"
@@ -26,7 +26,7 @@ const Header = () => {
                     Webs
                   </Link>
                 </li>
-                <li className="inline-flex border-b-2 border-transparent hover:border-orange-500 transition duration-300 ease-in-out">
+                <li className="text-nowrap inline-flex border-b-2 border-transparent hover:border-indigo-400 transition duration-300 ease-in-out">
                   <Link
                     href="/services/item2"
                     className="mt-6 text-lg font-medium leading-8 sm:text-center"
@@ -34,7 +34,7 @@ const Header = () => {
                     Apps
                   </Link>
                 </li>
-                <li className="inline-flex border-b-2 border-transparent hover:border-orange-500 transition duration-300 ease-in-out">
+                <li className="text-nowrap inline-flex border-b-2 border-transparent hover:border-indigo-400 transition duration-300 ease-in-out">
                   <Link
                     href="/services/item3"
                     className="mt-6 text-lg font-medium leading-8 sm:text-center"
@@ -42,7 +42,7 @@ const Header = () => {
                     Video Games
                   </Link>
                 </li>
-                <li className="inline-flex border-b-2 border-transparent hover:border-orange-500 transition duration-300 ease-in-out">
+                <li className="text-nowrap inline-flex border-b-2 border-transparent hover:border-indigo-400 transition duration-300 ease-in-out">
                   <Link
                     href="/services/item4"
                     className="mt-6 text-lg font-medium leading-8 sm:text-center"
@@ -50,7 +50,7 @@ const Header = () => {
                     marketing
                   </Link>
                 </li>
-                <li className="inline-flex border-b-2 border-transparent hover:border-orange-500 transition duration-300 ease-in-out">
+                <li className="inline-flex border-b-2 border-transparent hover:border-indigo-400 transition duration-300 ease-in-out">
                   <Link
                     href="/services/item5"
                     className="mt-6 text-lg font-medium leading-8 sm:text-center"

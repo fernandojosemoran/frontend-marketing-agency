@@ -37,7 +37,7 @@ function CategoriesHeader({ categories }: ICategoriesHeaderProps) {
               <nav className="relative -mb-6 w-full pb-6">
                 <ul
                   role="list"
-                  className="mx-2 md:mx-4 flex scrollbar-x space-x-8 sm:mx-6 lg:mx-0 lg:gap-x-8 lg:space-x-0"
+                  className="text-nowrap mx-2 md:mx-4 flex scrollbar-x space-x-8 sm:mx-6 lg:mx-0 lg:gap-x-8 lg:space-x-0"
                 >
                   {categories.map((element: Category, index: number) => {
                     return (
