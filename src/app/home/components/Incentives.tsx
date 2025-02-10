@@ -1,9 +1,10 @@
-import Image from "next/image";
-// import logo from "@/assets/services/imgs/markeing-agency.png";
+import FreeIcon from "@/app/shared/icons/Free";
+import ChangesIcon from "@/app/shared/icons/Changes";
+import WarrantyIcon from "@/app/shared/icons/Warranty";
 
 interface IIncentives {
   name: string;
-  imageSrc: string;
+  icon: React.JSX.Element;
   description: string;
 }
 // https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg
@@ -13,19 +14,19 @@ interface IIncentives {
 const incentives: IIncentives[] = [
   {
     name: "Free shipping",
-    imageSrc: "https://vectorified.com/images/enterprise-icon-16.png",
+    icon: <FreeIcon />,
     description:
       "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
   },
   {
     name: "10-year warranty",
-    imageSrc: "https://vectorified.com/images/enterprise-icon-16.png",
+    icon: <WarrantyIcon width={100} height={100} />,
     description:
       "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
   },
   {
     name: "Exchanges",
-    imageSrc: "https://vectorified.com/images/enterprise-icon-16.png",
+    icon: <ChangesIcon width={100} height={100} />,
     description:
       "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
   },
@@ -52,13 +53,7 @@ const Incentives = () => {
             {incentives.map((incentive) => (
               <div key={incentive.name} className="sm:flex lg:block">
                 <div className="sm:flex-shrink-0">
-                  <Image
-                    width={64}
-                    height={64}
-                    className="max-h-16 max-w-16"
-                    src={incentive.imageSrc}
-                    alt=""
-                  />
+                  {incentive.icon} 
                 </div>
                 <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
                   <h3 className="text-sm font-medium text-lm-third-text dark:text-dm-primary-text">

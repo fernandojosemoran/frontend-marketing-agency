@@ -1,5 +1,11 @@
 "use client";
-import Image from "next/image";
+
+import LaravelLogoIcon from "@/app/shared/icons/tailwind-logos/LaravelLogoIcon";
+import MirageLogoIcon from "@/app/shared/icons/tailwind-logos/MirageLogoIcon";
+import StatamicLogoIcon from "@/app/shared/icons/tailwind-logos/StatamicLogoIcon";
+import StaticKitLogoIcon from "@/app/shared/icons/tailwind-logos/StaticKit";
+import TransistorLogoIcon from "@/app/shared/icons/tailwind-logos/TransistorLogoIcon";
+import TupleLogoIcon from "@/app/shared/icons/tailwind-logos/TupleLogoIcon";
 
 function Clients() {
   return (
@@ -18,7 +24,7 @@ function Clients() {
             <div className="mt-8 sm:flex">
               <div className="rounded-md shadow">
                 <a
-                  href="/"
+                  href="/register"
                   className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
                 >
                   Create Account
@@ -26,7 +32,7 @@ function Clients() {
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
                 <a
-                  href="/"
+                  href="/contact"
                   className="flex items-center justify-center rounded-md border border-transparent bg-indigo-100 px-5 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200"
                 >
                   Contact Us
@@ -35,53 +41,23 @@ function Clients() {
             </div>
           </div>
           <div className="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
-            <div className="relative max-h-12 w-12 col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <Image
-                width={48}
-                height={48}
-                src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                alt="Workcation"
-              />
+            <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
+              <TransistorLogoIcon width={150} height={50}/>
             </div>
-            <div className="relative max-h-12 w-12 col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <Image
-                width={48}
-                height={48}
-                src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                alt="Mirage"
-              />
+            <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
+              <MirageLogoIcon width={200} height={50} />
             </div>
-            <div className="relative max-h-12 w-12 col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <Image
-                width={48}
-                height={48}
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                alt="Tuple"
-              />
+            <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
+              <TupleLogoIcon width={200} height={65} />
             </div>
-            <div className="relative max-h-12 w-12 col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <Image
-                width={48}
-                height={48}
-                src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg"
-                alt="Laravel"
-              />
+            <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
+              <LaravelLogoIcon width={200} height={50}/>
             </div>
-            <div className="relative max-h-12 w-12 col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <Image
-                width={48}
-                height={48}
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
-              />
+            <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
+              <StaticKitLogoIcon width={140} height={50}/>
             </div>
-            <div className="relative max-h-12 w-12 col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <Image
-                width={48}
-                height={48}
-                src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg"
-                alt="Statamic"
-              />
+            <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
+              <StatamicLogoIcon width={200} height={65} />
             </div>
           </div>
         </div>

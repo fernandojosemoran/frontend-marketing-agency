@@ -34,8 +34,6 @@ function BlogCardHorizontal({ post, index }: IBlogCardHorizontalProps) {
     paragraphRef?.current?.classList.add("text-indigo-400");
   };
 
-  console.log({thumbnail: post.thumbnail });
-
   return (
     <div
       onMouseEnter={handlerMouseEnter}

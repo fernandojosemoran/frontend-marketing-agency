@@ -9,7 +9,11 @@ import {
   Testimonial,
 } from "./components";
 
-import Image from "next/image";
+import TupleLogoIcon from "../shared/icons/tailwind-logos/TupleLogoIcon";
+import TransistorLogoIcon from "../shared/icons/tailwind-logos/TransistorLogoIcon";
+import StatamicLogoIcon from "../shared/icons/tailwind-logos/StatamicLogoIcon";
+import SavvycalLogoIcon from "../shared/icons/tailwind-logos/SavvycalLogoIcon";
+import ReformLogoIcon from "../shared/icons/tailwind-logos/ReformLogoIcon";
 
 export default function CareersPage() {
   useEffect(() => toggleDarkMode());
@@ -26,47 +30,23 @@ export default function CareersPage() {
             </h3>
           </div>
           <div className="mx-auto lg:mx-12 max-w-full py-12 px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-              <div className="max-h-12 max-w-12 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <Image
-                  width={48}
-                  height={48}
-                  src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                  alt="Tuple"
-                />
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-6 lg:grid-cols-5">
+              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                <TupleLogoIcon width={ 100 } height={50}/>
               </div>
-              <div className="max-h-12 max-w-12 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <Image
-                  width={48}
-                  height={48}
-                  src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                  alt="Mirage"
-                />
+              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                <TransistorLogoIcon width={ 150 } height={50}/>
               </div>
-              <div className="max-h-12 max-w-12 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <Image
-                  width={48}
-                  height={48}
-                  src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                  alt="StaticKit"
-                />
+              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                <StatamicLogoIcon  width={ 150 } height={50}/>
               </div>
-              <div className="max-h-12 max-w-12 col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-                <Image
-                  width={48}
-                  height={48}
-                  src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                  alt="Transistor"
-                />
+              <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                <SavvycalLogoIcon width={ 100 } height={50}/>
               </div>
-              <div className="max-h-12 max-w-12 col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-                <Image
-                  width={48}
-                  height={48}
-                  src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                  alt="Workcation"
-                />
+              <div className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
+                <ReformLogoIcon width={ 200 }/>
               </div>
+              
             </div>
           </div>
         </div>
@@ -77,3 +57,5 @@ export default function CareersPage() {
     </>
   );
 }
+
+

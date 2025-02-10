@@ -70,7 +70,7 @@ export default function Features() {
               <div key={feature.name} className="relative">
                 <dt>
                   <div
-                    className="absolute h-6 w-6 text-green-500"
+                    className="absolute h-6 w-6 flex gap-2"
                     aria-hidden="true"
                   >
                     <CheckIcon />
