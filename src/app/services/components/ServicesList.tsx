@@ -15,7 +15,7 @@ function ServicesList(props: IServiceListProps) {
 
       <div className="relative w-full">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight dark:text-dm-secondary-text text-lm-third-text sm:text-4xl">
+          <h2 className="ml-10 text-3xl font-bold tracking-tight dark:text-dm-secondary-text text-lm-third-text sm:text-4xl">
             {props.sectionTitle}
           </h2>
         </div>

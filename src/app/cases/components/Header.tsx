@@ -5,7 +5,7 @@ const Header = () => {
         <div className="relative px-6 lg:px-8">
           <div className=" max-w-3xl pt-20 pb-32 sm:pt-36 sm:pb-40">
             <div>
-              <div className="ml-16">
+              <div className="sm:ml-16">
                 <h1 className="text-4xl font-bold tracking-tight sm:text- sm:text-6xl">
                   Cases studies
                 </h1>

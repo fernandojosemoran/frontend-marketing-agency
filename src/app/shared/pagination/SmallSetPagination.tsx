@@ -55,7 +55,7 @@ const NextButton = ({ next_number, disable = false, length }: INextButtonProps) 
   const btnStyle: string = isPar ? "text-gray-600" : "text-gray-400 hover:text-gray-700";
 
   return (        
-    <div className="-mt-px w-0">
+    <div>
       <button
         onClick={next_number}
         className={`${btnStyle} border-t-2 border-transparent pt-5 pl-1 inline-flex items-center text-sm font-medium dark:border-none hover:border-gray-300`}
@@ -147,7 +147,7 @@ function SmallSetPagination({ list_page, list, count }: ISmallSetPagination) {
   };
 
   return (
-    <nav className="border-t border-gray-200 px-4 flex justify-center sm:px-0">
+    <nav className="border-t border-gray-200 px-4 flex justify-evenly sm:px-0">
       {currentPage !== 1 
       ? (
         <PreviousButton currentPage={currentPage} previous_number={previous_number}/>

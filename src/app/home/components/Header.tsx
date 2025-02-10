@@ -17,7 +17,7 @@ const Header = () => {
                   <TypeWriter />
                 </span>
               </h1>
-              <ul className="text-gray-700 dark:text-dm-secondary-text flex gap-4 overflow-x-scroll overflow-y-hidden sm:gap-8 items-center justify-center my-10 hidden-x-scroll">
+              <ul className="text-gray-700 dark:text-dm-secondary-text flex gap-4 overflow-x-scroll overflow-y-hidden sm:gap-8 sm:items-center sm:justify-center my-10 hidden-x-scroll">
                 <li className="text-nowrap inline-flex border-b-2 border-transparent hover:border-indigo-400 transition duration-300 ease-in-out">
                   <Link
                     href="/services/item1"

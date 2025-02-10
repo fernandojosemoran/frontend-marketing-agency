@@ -24,7 +24,7 @@ function CasesList() {
         <div className="h-1/3 bg-lm-primary dark:bg-dm-third sm:h-2/3" />
       </div>
 
-      <div className="relative mx-auto max-w-3xl drop-shadow-sm border-slate-600">
+      <div className="relative mx-5 sm:mx-10 max-w-3xl drop-shadow-sm border-slate-600">
         <Carousel {...settings}>
           {posts.map((element: IPost, index: number) => (
             <CaseCard key={index} index={index} data={element} />
