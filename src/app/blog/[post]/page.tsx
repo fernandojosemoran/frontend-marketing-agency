@@ -17,6 +17,7 @@ import { env } from "@/infrastructure/constants";
 const NEXT_PUBLIC_CLIENT_BACKEND_URL: string = env.NEXT_PUBLIC_CLIENT_BACKEND_URL;
 
 const Post = ({ post }: {post: IDetailPostApi}) => {
+  console.log(`${NEXT_PUBLIC_CLIENT_BACKEND_URL}/${post?.thumbnail}`);
 
   return (
     <div className="mt-28 overflow-x-hidden">
@@ -26,7 +27,7 @@ const Post = ({ post }: {post: IDetailPostApi}) => {
               width={800}
               height={800}
               className="object-cover mx-auto"
-              src={decodeURIComponent(`${NEXT_PUBLIC_CLIENT_BACKEND_URL}/${post?.thumbnail}`)}
+              src={`${NEXT_PUBLIC_CLIENT_BACKEND_URL}/${post?.thumbnail}`}
               alt={post?.title}
             />
             <div
