@@ -26,7 +26,7 @@ const Post = ({ post }: {post: IDetailPostApi}) => {
               width={800}
               height={800}
               className="object-cover mx-auto"
-              src={`${NEXT_PUBLIC_CLIENT_BACKEND_URL}/${post?.thumbnail}`}
+              src={decodeURIComponent(`${NEXT_PUBLIC_CLIENT_BACKEND_URL}/${post?.thumbnail}`)}
               alt={post?.title}
             />
             <div
