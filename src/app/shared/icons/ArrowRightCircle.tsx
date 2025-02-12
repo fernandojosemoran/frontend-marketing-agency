@@ -17,6 +17,7 @@ export function ArrowRightCircleIcon({
       stroke="currentColor"
       className="size-6"
     >
+      
       <path
         strokeLinecap="round"
         strokeLinejoin="round"

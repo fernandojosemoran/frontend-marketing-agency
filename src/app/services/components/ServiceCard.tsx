@@ -25,7 +25,7 @@ function ServiceCard() {
             key={index}
             className="flex w-full gap-5 drop-shadow-sm outline-slate-400"
           >
-            <div className="w-full relative p-8 h-96 lg:h-[200pm] bg-lm-primary dark:bg-dm-secondary hover:-translate-y-1 transition duration-300 ease-in-out">
+            <div className="w-full relative p-8 h-96 lg:h-[200pm] bg-lm-secondary dark:bg-dm-secondary hover:-translate-y-1 transition duration-300 ease-in-out">
               <div className="w-full">
                 <Image
                   width={40}

@@ -1,6 +1,7 @@
 export default function LaravelLogoIcon({
   width = 0,
   height = 0,
+  fill= "#ffffff",
   ...props
 }: React.SVGProps<SVGSVGElement>) {
   return (
@@ -11,7 +12,7 @@ export default function LaravelLogoIcon({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clipPath="url(#a)" fill="#FFFFFF">
+      <g clipPath="url(#a)" fill={fill}>
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -32,7 +33,7 @@ export default function LaravelLogoIcon({
       </g>
       <defs>
         <clipPath id="a">
-          <path fill="#FFFFFF" d="M0 0h136v48H0z" />
+          <path fill={fill} d="M0 0h136v48H0z" />
         </clipPath>
       </defs>
     </svg>

@@ -1,6 +1,6 @@
 "use client";
 
-import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
+import { isDarkTheme, toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
 import { useEffect } from "react";
 import {
   CareersFeatures,
@@ -18,6 +18,8 @@ import ReformLogoIcon from "../shared/icons/tailwind-logos/ReformLogoIcon";
 export default function CareersPage() {
   useEffect(() => toggleDarkMode());
 
+  const isDarkMode: boolean  = isDarkTheme;
+
   return (
     <>
       <div className="pt-28 bg-lm-primary dark:bg-dm-primary">
@@ -32,19 +34,19 @@ export default function CareersPage() {
           <div className="mx-auto lg:mx-12 max-w-full py-12 px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-6 lg:grid-cols-5">
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <TupleLogoIcon width={ 100 } height={50}/>
+                <TupleLogoIcon fill={isDarkMode ? "#eee" : "#000"} width={ 100 } height={50}/>
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <TransistorLogoIcon width={ 150 } height={50}/>
+                <TransistorLogoIcon fill={isDarkMode ? "#eee" : "#000"} width={ 150 } height={50}/>
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <StatamicLogoIcon  width={ 150 } height={50}/>
+                <StatamicLogoIcon fill={isDarkMode ? "#eee" : "#000"}  width={ 150 } height={50}/>
               </div>
               <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-                <SavvycalLogoIcon width={ 100 } height={50}/>
+                <SavvycalLogoIcon fill={isDarkMode ? "#eee" : "#000"} width={ 100 } height={50}/>
               </div>
               <div className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-                <ReformLogoIcon width={ 200 }/>
+                <ReformLogoIcon fill={isDarkMode ? "#eee" : "#000"} width={ 200 }/>
               </div>
               
             </div>

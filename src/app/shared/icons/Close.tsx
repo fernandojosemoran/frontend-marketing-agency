@@ -1,6 +1,7 @@
 function CloseIcon({
   width = 22,
   height = 22,
+  stroke = "#eee",
   ...props
 }: React.SVGProps<SVGSVGElement>) {
   return (
@@ -14,14 +15,14 @@ function CloseIcon({
     >
       <path
         d="M3 21.32L21 3.32001"
-        stroke="#eee"
+        stroke={stroke}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M3 3.32001L21 21.32"
-        stroke="#eee"
+        stroke={stroke}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

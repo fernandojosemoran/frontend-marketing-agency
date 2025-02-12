@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   return (
     <div className="pt-28">
-    <div className="isolate bg-lm-primary text-dm-primary dark:text-lm-primary dark:bg-dm-primary px-6 py-24 sm:py-32 lg:px-8 relative">
+    <div className="isolate bg-white text-dm-primary dark:text-lm-primary dark:bg-dm-primary px-6 py-24 sm:py-32 lg:px-8 relative">
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
@@ -37,7 +37,7 @@ export default function ContactPage() {
           Aute magna irure deserunt veniam aliqua magna enim voluptate.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20 bg-lm-secondary dark:bg-dm-secondary py-16 px-10">
+      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20 bg-gray-100 dark:bg-dm-secondary py-16 px-10">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold text-dm-third dark:text-lm-primary">

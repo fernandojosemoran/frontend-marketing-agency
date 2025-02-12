@@ -50,7 +50,7 @@ function BlogCardHorizontal({ post, index }: IBlogCardHorizontalProps) {
                 width={288}
                 height={288}
                 priority
-                className="max-h-72 lg:w-96 rounded"
+                className="max-h-72 lg:w-96 rounded ml-8 lg:ml-0"
                 src={`${NEXT_PUBLIC_CLIENT_BACKEND_URL}/${post.thumbnail}`}
                 alt={post.title}
                 style={{
@@ -59,7 +59,7 @@ function BlogCardHorizontal({ post, index }: IBlogCardHorizontalProps) {
               />
             </Link>
           </figure>
-          <div className="min-w-0 flex-1 px-8 p-4 text-dm-secondary-text">
+          <div className="min-w-0 flex-1 px-8 p-4 text-dm-primary dark:text-dm-secondary-text">
             <p
               ref={paragraphRef}
               id={`title` + post.id}

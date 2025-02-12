@@ -10,6 +10,7 @@ import CloseIcon from "../../icons/Close";
 
 import logo from "@/assets/mark.svg";
 import Image from "next/image";
+import { isDarkTheme } from "@/infrastructure/helpers/toggle-dark-mode";
 
 interface INavbarRoots {
   id: number;
@@ -24,60 +25,60 @@ const navbarRoots: INavbarRoots[] = [
     url: "/cases",
     urlName: "Cases",
     classUrl:
-      "text-lg font-medium border-white leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-orange-500 transition duration-300 ease-in-out",
+      "text-lg font-medium leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-indigo-500 transition duration-300 ease-in-out",
   },
   {
     id: 2,
     url: "/services",
     urlName: "Services",
     classUrl:
-      "text-lg font-medium border-white leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-orange-500 transition duration-300 ease-in-out",
+      "text-lg font-medium leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-indigo-500 transition duration-300 ease-in-out",
   },
   {
     id: 3,
     url: "/about",
     urlName: "About",
     classUrl:
-      "text-lg font-medium border-white leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-orange-500 transition duration-300 ease-in-out",
+      "text-lg font-medium leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-indigo-500 transition duration-300 ease-in-out",
   },
   {
     id: 4,
     url: "/careers",
     urlName: "Careers",
     classUrl:
-      "text-lg font-medium border-white leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-orange-500 transition duration-300 ease-in-out",
+      "text-lg font-medium leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-indigo-500 transition duration-300 ease-in-out",
   },
   {
     id: 5,
     url: "/blog",
     urlName: "Blog",
     classUrl:
-      "text-lg font-medium border-white leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-orange-500 transition duration-300 ease-in-out",
+      "text-lg font-medium leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-indigo-500 transition duration-300 ease-in-out",
   },
   {
     id: 6,
     url: "/contact",
     urlName: "Contact",
     classUrl:
-      "text-lg font-medium border-white leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-orange-500",
+      "text-lg font-medium leading-6 text-gray-900 dark:text-dm-secondary-text dark:border-none hover:underline hover:underline-offset-4 select-none mx-4 border-b-2 hover:border-indigo-500",
   },
 ];
 
 const menuStyles = {
   close: "hidden ml-4 mt-2 flex-shrink-0 md:flex flex-row items-center",
-  open: "absolute top-0 right-0 left-0 bottom-0 w-screen h-screen transition duration-500 bg-black opacity-opacity-55 flex flex-col justify-center items-center gap-2",
+  open: "absolute top-0 right-0 left-0 bottom-0 w-screen h-screen overflow-y-hidden transition duration-500 bg-white text-lm-secondary dark:bg-black dark:text-lm-secondary opacity-opacity-55 flex flex-col justify-center items-center gap-2",
 };
 
 const Navbar = () => {
   const { closeModal, isOpen, openModal } = useModal();
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 
-  const handlerOpenMenu = () => {
-    setIsOpenMenu(!isOpenMenu);
-  };
+  const handlerOpenMenu = () => setIsOpenMenu(!isOpenMenu);
+
+  const isDarkMode: boolean = isDarkTheme;
 
   return (
-    <nav className="bg-lm-primary text-gray-700 dark:bg-dm-secondary border-b-gray-500 dark:text-dm-secondary-text w-full py-2 my-0 transition duration-300 ease-in-out shadow-navbarShadow fixed top-0 flex flex-col justify-center z-50">
+    <nav className="bg-gray-200 text-gray-700 dark:bg-dm-secondary border-b-gray-500 dark:text-dm-secondary-text w-full py-2 my-0 transition duration-300 ease-in-out shadow-navbarShadow fixed top-0 flex flex-col justify-center z-50">
       <ol className="border-gray-200 sm:px-6">
         <div className="-ml-4 -mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap md:px-4 px-2 ">
           <li className="ml-4 mt-2">
@@ -92,7 +93,9 @@ const Navbar = () => {
                 ${isOpenMenu ? "visible" : "hidden"} 
                 fixed top-5 right-5 hover:cursor-pointer hover:opacity-50`}
               onClick={() => setIsOpenMenu(false)}
+              stroke={isDarkMode ? "#eee" : "#000"}
             />
+        
             {navbarRoots.map((element) => (
               <Link
                 href={element.url}
@@ -116,6 +119,7 @@ const Navbar = () => {
           <Menu
             className="md:hidden pr-4 hover:cursor-pointer"
             onClick={handlerOpenMenu}
+            stroke={isDarkMode ? "#eee" : "#000"}
           />
         </div>
       </ol>

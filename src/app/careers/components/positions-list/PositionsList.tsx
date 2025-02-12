@@ -82,7 +82,7 @@ export function PositionsList() {
           <select
             id="location"
             name="location"
-            className="mt-1 block w-full rounded-md border-gray-300 dark:bg-dm-secondary mb-2 dark:text-dm-secondary-text py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md bg-lm-primary dark:bg-dm-secondary mb-2 dark:text-dm-secondary-text py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
             defaultValue="Canada"
           >
             <option>United States</option>

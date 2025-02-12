@@ -29,7 +29,7 @@ function CategoriesHeader({ categories }: ICategoriesHeaderProps) {
   };
 
   return (
-    <div className="w-full mt-8 bg-lm-primary dark:bg-dm-primary py-8">
+    <div className="w-full mt-8 bg-inherit dark:bg-dm-primary py-8">
       <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-12 md:grid-rows-1">
         <div className="col-span-10">
           <div className="space-x-8 px-2 md:px-12">
@@ -44,7 +44,8 @@ function CategoriesHeader({ categories }: ICategoriesHeaderProps) {
                       <button
                         key={index}
                         className={`${tailwindClasses(element.slug)} 
-                          py-2 px-6 bg-lm-primary text-lm-third-text dark:bg-dm-secondary dark:text-dm-secondary-text hover:opacity-80 hover:text-indigo-500 dark:hover:text-indigo-300 text-md rounded-md md:text-lg font-regular`}
+                          py-2 px-6 bg-lm-secondary text-lm-third-text dark:bg-dm-secondary dark:text-dm-secondary-text hover:opacity-80 hover:text-indigo-500 dark:hover:text-indigo-300 text-md rounded-md md:text-lg font-regular`
+                        }
                       >
                         {element.name}
                       </button>
@@ -55,6 +56,7 @@ function CategoriesHeader({ categories }: ICategoriesHeaderProps) {
             </div>
           </div>
         </div>
+        
         <form
           className="flex relative justify-center mr-10 mt-1 col-span-2"
           onSubmit={handlerSubmit}

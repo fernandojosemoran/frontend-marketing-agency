@@ -1,6 +1,7 @@
 export default function MirageLogoIcon({
   width = 0,
   height = 0,
+  fill= "#ffffff",
   ...props
 }: React.SVGProps<SVGSVGElement>) {
   return (
@@ -11,7 +12,7 @@ export default function MirageLogoIcon({
       {...props}
       fill="none"
     >
-      <g clipPath="url(#a)" fill="#FFFF">
+      <g clipPath="url(#a)" fill={fill}>
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -27,7 +28,7 @@ export default function MirageLogoIcon({
       </g>
       <defs>
         <clipPath id="a">
-          <path fill="#FFFF" d="M0 0h138v48H0z" />
+          <path fill={fill} d="M0 0h138v48H0z" />
         </clipPath>
       </defs>
     </svg>

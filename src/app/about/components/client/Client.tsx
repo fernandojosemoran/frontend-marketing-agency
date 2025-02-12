@@ -6,8 +6,12 @@ import StatamicLogoIcon from "@/app/shared/icons/tailwind-logos/StatamicLogoIcon
 import StaticKitLogoIcon from "@/app/shared/icons/tailwind-logos/StaticKit";
 import TransistorLogoIcon from "@/app/shared/icons/tailwind-logos/TransistorLogoIcon";
 import TupleLogoIcon from "@/app/shared/icons/tailwind-logos/TupleLogoIcon";
+import { isDarkTheme } from "@/infrastructure/helpers/toggle-dark-mode";
 
 function Clients() {
+
+  const isDarkMode: boolean = isDarkTheme;
+
   return (
     <div className="bg-lm-primary dark:bg-dm-primary">
       <div className="mx-auto lg:mx-12 max-w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -42,22 +46,22 @@ function Clients() {
           </div>
           <div className="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
             <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <TransistorLogoIcon width={150} height={50}/>
+              <TransistorLogoIcon fill={isDarkMode ? "#ffffff" : "#000"} width={150} height={50} />
             </div>
             <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <MirageLogoIcon width={200} height={50} />
+              <MirageLogoIcon fill={isDarkMode ? "#ffffff" : "#000"} width={200} height={50} />
             </div>
             <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <TupleLogoIcon width={200} height={65} />
+              <TupleLogoIcon fill={isDarkMode ? "#ffffff" : "#000"} width={200} height={65} />
             </div>
             <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <LaravelLogoIcon width={200} height={50}/>
+              <LaravelLogoIcon fill={isDarkMode ? "#ffffff" : "#000"} width={200} height={50} />
             </div>
             <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <StaticKitLogoIcon width={140} height={50}/>
+              <StaticKitLogoIcon fill={isDarkMode ? "#ffffff" : "#000"} width={140} height={50} />
             </div>
             <div className="relative col-span-1 flex justify-center bg-lm-primary dark:bg-dm-primary py-8 px-8">
-              <StatamicLogoIcon width={200} height={65} />
+              <StatamicLogoIcon fill={isDarkMode ? "#ffffff" : "#000"} width={200} height={65} />
             </div>
           </div>
         </div>
