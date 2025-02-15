@@ -6,11 +6,11 @@ interface IModalProps {
 }
 
 export const Modal = (props: IModalProps) => {
-  return (
+  return ( 
     <div>
       {props.isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-10 drop-shadow-lg border-gray-200">
-          <div className="bg-lm-secondary dark:bg-dm-secondary w-1/2 p-6 rounded shadow relative py-20">
+          <div className="bg-white dark:bg-dm-secondary lg:w-1/2 p-6 rounded shadow relative py-20">
             <h2 className="text-2xl text-center font-bold mb-4">Login</h2>
               <Login />
             <button onClick={props.closeModal} className="mt-4 bg-indigo-800 hover:bg-red-500 text-white font-bold py-2 rounded absolute top-0 right-5 px-2">
