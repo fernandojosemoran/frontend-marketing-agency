@@ -29,7 +29,8 @@ const nextConfig = {
           },
           {
             protocol: "https",
-            hostname: "marketing-agency-bucket.s3.amazonaws.com"
+            hostname: "marketing-agency-bucket.s3.amazonaws.com",
+            pathname: "/static/**"
           }
         ],
       },
