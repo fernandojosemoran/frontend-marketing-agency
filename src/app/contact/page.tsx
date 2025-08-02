@@ -1,18 +1,15 @@
 "use client";
 
-import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
 import { useEffect, useState } from "react";
 
+import useToggleDarkMode from "../(shared)/hooks/useToggleDarkModel";
+
 export default function ContactPage() {
-  useEffect(() => {
-    toggleDarkMode();
-  }, []);
+  const { handlerTheme } = useToggleDarkMode();
+
+  useEffect(() => handlerTheme(), []);
 
   const [agreed, setAgreed] = useState<boolean>(false);
-
-  useEffect(() => {
-    toggleDarkMode();
-  }, []);
 
   return (
     <div className="pt-28">

@@ -1,9 +1,9 @@
 import { Dispatch } from '@reduxjs/toolkit';
-import { GET_CATEGORIES_SUCCESS } from '../../../shared/provider/slices/categories/categories.slice';
-
-import BlogService from '../../../shared/services/blog.service';
-import CategoryService from '../../../shared/services/category.service';
 import { IBlogPostAPI, IPostApi } from '@/domain/interfaces/blog.api.interface';
+import { GET_CATEGORIES_SUCCESS } from '../../../(shared)/provider/slices/categories/categories.slice';
+
+import BlogService from '../../../(shared)/services/blog.service';
+import CategoryService from '../../../(shared)/services/category.service';
 import BlogRepositoryImpl from '@/infrastructure/repositories/blog.repository.impl';
 import BlogDataSourceImpl from '@/infrastructure/datasources/blog.datasource.impl';
 

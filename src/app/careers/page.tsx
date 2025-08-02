@@ -1,24 +1,23 @@
 "use client";
 
-import { isDarkTheme, toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
 import { useEffect } from "react";
 import {
   CareersFeatures,
   CareersHeader,
   PositionsList,
   Testimonial,
-} from "./components";
+} from "./(components)";
 
-import TupleLogoIcon from "../shared/icons/tailwind-logos/TupleLogoIcon";
-import TransistorLogoIcon from "../shared/icons/tailwind-logos/TransistorLogoIcon";
-import StatamicLogoIcon from "../shared/icons/tailwind-logos/StatamicLogoIcon";
-import SavvycalLogoIcon from "../shared/icons/tailwind-logos/SavvycalLogoIcon";
-import ReformLogoIcon from "../shared/icons/tailwind-logos/ReformLogoIcon";
+import TupleLogoIcon from "../(shared)/icons/tailwind-logos/TupleLogoIcon";
+import TransistorLogoIcon from "../(shared)/icons/tailwind-logos/TransistorLogoIcon";
+import StatamicLogoIcon from "../(shared)/icons/tailwind-logos/StatamicLogoIcon";
+import SavvycalLogoIcon from "../(shared)/icons/tailwind-logos/SavvycalLogoIcon";
+import ReformLogoIcon from "../(shared)/icons/tailwind-logos/ReformLogoIcon";
+import useToggleDarkMode from "../(shared)/hooks/useToggleDarkModel";
 
 export default function CareersPage() {
-  useEffect(() => toggleDarkMode());
-
-  const isDarkMode: boolean  = isDarkTheme;
+  const { handlerTheme, isDarkTheme } = useToggleDarkMode();
+  useEffect(() => handlerTheme(), []);
 
   return (
     <>
@@ -34,19 +33,19 @@ export default function CareersPage() {
           <div className="mx-auto lg:mx-12 max-w-full py-12 px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-6 lg:grid-cols-5">
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <TupleLogoIcon fill={isDarkMode ? "#eee" : "#000"} width={ 100 } height={50}/>
+                <TupleLogoIcon fill={isDarkTheme ? "#eee" : "#000"} width={ 100 } height={50}/>
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <TransistorLogoIcon fill={isDarkMode ? "#eee" : "#000"} width={ 150 } height={50}/>
+                <TransistorLogoIcon fill={isDarkTheme ? "#eee" : "#000"} width={ 150 } height={50}/>
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <StatamicLogoIcon fill={isDarkMode ? "#eee" : "#000"}  width={ 150 } height={50}/>
+                <StatamicLogoIcon fill={isDarkTheme ? "#eee" : "#000"}  width={ 150 } height={50}/>
               </div>
               <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-                <SavvycalLogoIcon fill={isDarkMode ? "#eee" : "#000"} width={ 100 } height={50}/>
+                <SavvycalLogoIcon fill={isDarkTheme ? "#eee" : "#000"} width={ 100 } height={50}/>
               </div>
               <div className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-                <ReformLogoIcon fill={isDarkMode ? "#eee" : "#000"} width={ 200 }/>
+                <ReformLogoIcon fill={isDarkTheme ? "#eee" : "#000"} width={ 200 }/>
               </div>
               
             </div>

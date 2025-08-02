@@ -2,23 +2,24 @@
 
 import { useEffect } from "react";
 import { Category } from "@/domain/interfaces/category.api.interface";
-import { useAppDispatch, useAppSelector } from "../shared/hooks";
-import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
+import { useAppDispatch, useAppSelector } from "../(shared)/hooks";
 import { useSearchParams } from "next/navigation";
-import { GET_BLOG_LIST_CATEGORIES_PAGE } from "../shared/provider/slices/blog/blog-list-categories-page.slice";
+import { GET_BLOG_LIST_CATEGORIES_PAGE } from "../(shared)/provider/slices/blog/blog-list-categories-page.slice";
 import { IBlogPostAPI } from "@/domain/interfaces/blog.api.interface";
 
-import CategoriesHeader from "./components/categories-header/CategoriesHeader";
-import BlogList from "./components/blog-list/BlogList";
-import CircleLoader from "../shared/loaders/CircleLoader";
+import CategoriesHeader from "./(components)/categories-header/CategoriesHeader";
+import BlogList from "./(components)/blog-list/BlogList";
+import CircleLoader from "../(shared)/loaders/CircleLoader";
 import dynamic from "next/dynamic";
 import controller from "./blog-page.controller";
+import useToggleDarkMode from "../(shared)/hooks/useToggleDarkModel";
 
 
 
 function BlogPage() {
-  const dispatch = useAppDispatch();
+  const { handlerTheme } = useToggleDarkMode();
 
+  const dispatch = useAppDispatch();
   const params = useSearchParams();
   const page: number = Number(params.get("p")) || 1;
 
@@ -37,7 +38,7 @@ function BlogPage() {
   };
 
   useEffect(() => {
-    toggleDarkMode();
+    handlerTheme();
     controller.getCategories(dispatch);
     get_blog_list_page(page);
   }, [dispatch]);

@@ -2,9 +2,9 @@
 
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "@/app/shared/hooks";
+import { useAppDispatch, useAppSelector } from "@/app/(shared)/hooks";
 import { IPostApi } from "@/domain/interfaces/blog.api.interface";
-import { BLOG_SEARCH } from "@/app/shared/provider/slices/blog/blog-search.slice";
+import { BLOG_SEARCH } from "@/app/(shared)/provider/slices/blog/blog-search.slice";
 
 import dynamic from "next/dynamic";
 import controller from "./search-page.controller";

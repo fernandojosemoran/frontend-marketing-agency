@@ -1,28 +1,29 @@
 import type { Metadata } from "next";
+
 import localFont from "next/font/local";
 import "./globals.css";
 // import ReduxProvider from "./shared/provider/reduxProvider";
-import Navbar from "./shared/components/navigation/Navbar";
-import Footer from "./shared/components/navigation/Footer";
-import ReduxProvider from "./shared/provider/reduxProvider";
+import Navbar from "./(shared)/components/navigation/Navbar";
+import Footer from "./(shared)/components/navigation/Footer";
+import ReduxProvider from "./(shared)/provider/reduxProvider";
 interface IRootLayoutProps {
   children: React.ReactNode;
 }
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "./(fonts)/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "./(fonts)/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
 
 const title: string = "Marketing Agency";
-const description: string =
-  "Agencia de software y marketing digital. Servicios de creacion de pagina web y desarrollo de aplicaciones.";
+const description: string = "Agencia de software y marketing digital. Servicios de creacion de pagina web y desarrollo de aplicaciones.";
 
 export const metadata: Metadata = {
   title: title,

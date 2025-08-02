@@ -1,12 +1,15 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { ServiceHeader, ServiceList } from "./components";
-import { postsDesign, postsSoftware } from "../shared/data/posts";
-import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
+import { useEffect } from "react";
+import { ServiceHeader, ServiceList } from "./(components)";
+import { postsDesign, postsSoftware } from "../(shared)/data/posts";
+
+import useToggleDarkMode from "../(shared)/hooks/useToggleDarkModel";
 
 export default function ServicePage() {
-  useEffect(() => toggleDarkMode());
+  const { handlerTheme } = useToggleDarkMode();
+
+  useEffect(() => handlerTheme(), []);
 
   return (
     <>

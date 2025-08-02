@@ -10,19 +10,20 @@ import {
   Header,
   Incentives,
   LogoCloud,
-} from "./home/components";
+} from "./home/(components)";
 
-import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
-import { useAppDispatch } from "./shared/hooks";
+import { useAppDispatch } from "./(shared)/hooks";
 
 import controller from "./page.controller";
+import useToggleDarkMode from "./(shared)/hooks/useToggleDarkModel";
 
 
 export default function Home() {
   const dispatch = useAppDispatch();
+  const { handlerTheme } = useToggleDarkMode();
 
   useEffect(() => {
-    toggleDarkMode();
+    handlerTheme();
     controller.getCategories(dispatch);
   });
 

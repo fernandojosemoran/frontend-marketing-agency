@@ -1,10 +1,10 @@
 import { ICategoryListAPI } from "@/domain/interfaces/category.api.interface";
 import { Dispatch } from "@reduxjs/toolkit";
-import { GET_CATEGORIES_SUCCESS } from "../shared/provider/slices/categories/categories.slice";
+import { GET_CATEGORIES_SUCCESS } from "../(shared)/provider/slices/categories/categories.slice";
 import { IBlogPostAPI, IPostApi } from "@/domain/interfaces/blog.api.interface";
 
-import CategoryService from "../shared/services/category.service";
-import BlogService from "../shared/services/blog.service";
+import CategoryService from "../(shared)/services/category.service";
+import BlogService from "@/app/(shared)/services/blog.service";
 import BlogDataSourceImpl from "@/infrastructure/datasources/blog.datasource.impl";
 import BlogRepositoryImpl from "@/infrastructure/repositories/blog.repository.impl";
 

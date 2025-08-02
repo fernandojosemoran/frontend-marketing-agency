@@ -1,5 +1,6 @@
 import { IPostApi } from "@/domain/interfaces/blog.api.interface";
-import BlogService from "@/app/shared/services/blog.service";
+
+import BlogService from "@/app/(shared)/services/blog.service";
 import BlogRepositoryImpl from "@/infrastructure/repositories/blog.repository.impl";
 import BlogDataSourceImpl from "@/infrastructure/datasources/blog.datasource.impl";
 

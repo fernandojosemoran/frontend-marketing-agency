@@ -1,24 +1,22 @@
 "use client";
 
-import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
 import { useEffect, useState } from "react";
 import { IDetailPostApi } from "@/domain/interfaces/blog.api.interface";
-import { useAppDispatch, useAppSelector } from "@/app/shared/hooks";
-import { GET_BLOG } from "@/app/shared/provider/slices/blog/get-blog.slice";
+import { useAppDispatch, useAppSelector } from "@/app/(shared)/hooks";
+import { GET_BLOG } from "@/app/(shared)/provider/slices/blog/get-blog.slice";
 import { useParams } from "next/navigation";
+import { env } from "@/infrastructure/constants";
 
 import Image from "next/image";
 import moment from "moment";
 import Link from "next/link";
 import DOMPurify from 'dompurify';
 import controller from "./blog-post-page.controller";
-import { env } from "@/infrastructure/constants";
+import useToggleDarkMode from "@/app/(shared)/hooks/useToggleDarkModel";
 
 const NEXT_PUBLIC_CLIENT_BACKEND_URL: string = env.NEXT_PUBLIC_CLIENT_BACKEND_URL;
 
 const Post = ({ post }: {post: IDetailPostApi}) => {
-  console.log(`${NEXT_PUBLIC_CLIENT_BACKEND_URL}/${post?.thumbnail}`);
-
   return (
     <div className="mt-28 overflow-x-hidden">
         <div className="mx-auto w-8/12 bg-lm-primary dark:bg-dm-primary">
@@ -71,6 +69,7 @@ const Post = ({ post }: {post: IDetailPostApi}) => {
 };
 
 const BlogPostPage = () => {
+  const { handlerTheme } = useToggleDarkMode();
   const { post } = useParams();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -78,7 +77,7 @@ const BlogPostPage = () => {
   const postState: IDetailPostApi = useAppSelector((state) =>  state.blog.getBlog.blog);
 
   useEffect(() => {
-    toggleDarkMode();
+    handlerTheme();
 
     controller.getBlog(post.toLocaleString())
     .then(post => dispatch(GET_BLOG(post)))

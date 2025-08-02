@@ -1,21 +1,23 @@
 "use client";
 
-import { useEffect } from "react";
 import type { Category } from "@/domain/interfaces/category.api.interface";
+
+import { useEffect } from "react";
 import { IPostApi } from "@/domain/interfaces/blog.api.interface";
-import { useAppDispatch, useAppSelector } from "@/app/shared/hooks";
+import { useAppDispatch, useAppSelector } from "@/app/(shared)/hooks";
 import { useParams } from "next/navigation";
 import { redirect } from "next/navigation";
-import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
-import { BLOG_LIST_CATEGORIES } from "@/app/shared/provider/slices/blog/blog-list-categories.slice";
-import { GET_BLOG_LIST_CATEGORIES_PAGE } from "@/app/shared/provider/slices/blog/blog-list-categories-page.slice";
+import { BLOG_LIST_CATEGORIES } from "@/app/(shared)/provider/slices/blog/blog-list-categories.slice";
+import { GET_BLOG_LIST_CATEGORIES_PAGE } from "@/app/(shared)/provider/slices/blog/blog-list-categories-page.slice";
 
-import CategoriesHeader from "../../components/categories-header/CategoriesHeader";
-import BlogList from "../../components/blog-list/BlogList";
+import CategoriesHeader from "../../(components)/categories-header/CategoriesHeader";
+import BlogList from "../../(components)/blog-list/BlogList";
 import controller from "./category-slug-page.controller";
+import useToggleDarkMode from "@/app/(shared)/hooks/useToggleDarkModel";
 
 
 function SlugPage() {
+  const { handlerTheme } = useToggleDarkMode();
   const { slug } = useParams();
 
   const dispatch = useAppDispatch();
@@ -36,9 +38,9 @@ function SlugPage() {
 
   useEffect(() => {
     if (!slug) redirect("blog");
-    toggleDarkMode();
+    handlerTheme();
 
-    window.scrollTo(0, 0);
+    global.scrollTo(0, 0);
 
     controller.get_categories(dispatch);
     

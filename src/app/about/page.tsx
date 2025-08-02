@@ -5,16 +5,20 @@ import {
   AboutHeader,
   AboutTeam,
   Clients,
-} from "./components";
+} from "./(components)";
 
-import TestStats from "./components/test-stats/TestStats";
+import { useEffect } from "react";
 
 import Link from "next/link";
-import { useEffect } from "react";
-import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
+import TestStats from "./(components)/test-stats/TestStats";
+import useToggleDarkMode from "../(shared)/hooks/useToggleDarkModel";
+
+
 
 export default function AboutPage() {
-  useEffect(() => toggleDarkMode());
+  const { handlerTheme } = useToggleDarkMode();
+
+  useEffect(() => handlerTheme());
 
   return (
     <div className="pt-28">

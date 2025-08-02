@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
-import { CasesHeader, CasesList } from "./components";
-import { toggleDarkMode } from "@/infrastructure/helpers/toggle-dark-mode";
+import { CasesHeader, CasesList } from "./(components)";
+
+import useToggleDarkMode from "../(shared)/hooks/useToggleDarkModel";
 
 export default function CasesPage() {
-  useEffect(() => toggleDarkMode());
+  const { handlerTheme } = useToggleDarkMode();
+
+  useEffect(() => handlerTheme(), []);
 
   return (
     <div className="pt-28 dark:bg-dm-primary overflow-x-hidden">
