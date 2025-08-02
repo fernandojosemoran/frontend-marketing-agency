@@ -5,7 +5,6 @@ import { IDetailPostApi } from "@/domain/interfaces/blog.api.interface";
 import { useAppDispatch, useAppSelector } from "@/app/(shared)/hooks";
 import { GET_BLOG } from "@/app/(shared)/provider/slices/blog/get-blog.slice";
 import { useParams } from "next/navigation";
-import { env } from "@/infrastructure/constants";
 
 import Image from "next/image";
 import moment from "moment";
@@ -13,8 +12,6 @@ import Link from "next/link";
 import DOMPurify from 'dompurify';
 import controller from "./blog-post-page.controller";
 import useToggleDarkMode from "@/app/(shared)/hooks/useToggleDarkModel";
-
-const NEXT_PUBLIC_CLIENT_BACKEND_URL: string = env.NEXT_PUBLIC_CLIENT_BACKEND_URL;
 
 const Post = ({ post }: {post: IDetailPostApi}) => {
   return (
@@ -25,7 +22,7 @@ const Post = ({ post }: {post: IDetailPostApi}) => {
               width={800}
               height={800}
               className="object-cover mx-auto"
-              src={`${NEXT_PUBLIC_CLIENT_BACKEND_URL}/${post?.thumbnail}`}
+              src={post?.thumbnail}
               alt={post?.title}
             />
             <div

@@ -23,7 +23,7 @@ function handlerTheme(isDarkTheme: boolean): void {
 }
 
 export default function useToggleDarkMode(): ToggleDarkModeTypes {
-    const [ isDarkTheme, setIsDarkTheme ] = useState<boolean>(false);
+    const [ isDarkTheme, setIsDarkTheme ] = useState<boolean>(true);
   
     useEffect(() => {
       const theme = global.matchMedia('(prefers-color-scheme: dark)').matches;

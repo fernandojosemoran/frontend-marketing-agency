@@ -29,10 +29,6 @@ const nextConfig = {
           },
           {
             protocol: "https",
-            hostname: "marketing-agency-backend.buzz"
-          },
-          {
-            protocol: "https",
             hostname: "marketing-agency-bucket.s3.amazonaws.com"
           }
         ],
